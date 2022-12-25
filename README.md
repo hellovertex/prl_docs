@@ -10,10 +10,11 @@
 python3 -m venv <NAME_OF_VENV>
 ```
 
-2. Activate the new python virtualenv
+2. Activate the new python virtualenv and update pip
 
 ```commandline
-source <PATH_TO_VENV>/bin/activate
+   source <PATH_TO_VENV>/bin/activate
+&& pip install -U pip
 ```
 
 3. Install necessary `prl`-namespace packages from sources:
@@ -24,13 +25,9 @@ source <PATH_TO_VENV>/bin/activate
    git clone --recurse-submodules https://github.com/hellovertex/prl_environment.git
 && cd prl_environment
 && git submodule update --recursive --remote
+&& pip install requests
 && pip install .  # use pip install -e . optionally for development
 ```
-
-Note: If you did not clone using `--recurse-submodules`,
-run `git submodule update --recursive --remote --init` instead
-
-Note: You can use `pip install -e .` during development to make the package editable.
 
 - The Reinforcement Learning **baseline agents package** `prl-baselines`
 
@@ -48,3 +45,20 @@ Note: You can use `pip install -e .` during development to make the package edit
 && cd prl_reinforce
 && pip install .
 ```
+
+
+Note: If you did not clone using `--recurse-submodules`,
+run `git submodule update --recursive --remote --init` instead
+
+Note: You can use `pip install -e .` during development to make the package editable.
+
+## Usage
+
+----
+
+
+## Development
+Using Pycharm, add an SSH interpreter to develop, deploy, and debug directly on A Cloud VM.
+I used AWS EC2-instances. 
+Install repos there, copy host-ip and .pem file path to ssh-intrepreter-wizard and finally set
+sync directory locations. Done. You can now run the debugger on the remote machine.
