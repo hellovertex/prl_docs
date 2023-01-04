@@ -2,6 +2,9 @@
 
 ----
 
+![image](prl.png)
+
+
 ## Installation -- Ubuntu 20.04
 
 1. Create python virtualenv
@@ -51,13 +54,18 @@ Note: If you did not clone using `--recurse-submodules`,
 run `git submodule update --recursive --remote --init` instead
 
 Note: You can use `pip install -e .` during development to make the package editable.
+ 
+1. [x] `prl_environment`
+2. [x] `prl_baselines`
+3. [x] `prl_reinforce`
+4. [ ] `prl_frontend` - `npm install .` - wip
 
 ## Usage
 
 ----
 
 
-## Development
+## Development - wip
 Using Pycharm, add an SSH interpreter to develop, deploy, and debug directly on A Cloud VM.
 I used AWS EC2-instances. 
 Install repos there, copy host-ip and .pem file path to ssh-intrepreter-wizard and finally set
